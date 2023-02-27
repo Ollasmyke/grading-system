@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 My Grading System
+  p
+  a(href='/api-doc') - Swagger Link
+  - const name = global.appName
+  - const version = global.patchVersion
+  - const date = new Date().toDateString();
+  span #{name} #{version} - #{date}

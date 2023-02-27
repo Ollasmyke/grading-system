@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= header
+  pre #{message}
+  - const name = global.appName
+  - const version = global.patchVersion
+  - const date = new Date().toDateString();
+  span #{name} #{version} - #{date}
