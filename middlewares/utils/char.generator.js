@@ -6,6 +6,12 @@ const generateMatricNumber = () => {
   return customStringGenerator('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 7);
 }
 
+const generateCourseCode = name => {
+  let prefix = name.substring(0, 3);
+  let suffix = '101';
+  return `${prefix}${suffix}`;
+}
+
 const customStringGenerator = (characters, size) => {
   let result = "", charactersLength = characters.length;
   for (let i = 0; i < size; i++) result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -60,6 +66,7 @@ const checkIfValidUUID = str => {
 module.exports = {
   generateUUID,
   generateMatricNumber,
+  generateCourseCode,
   slugGenerator,
   camelCaseGenerator,
   findCharInArray,

@@ -15,5 +15,17 @@ const registerStudent = Joi.object({
   department: Joi.string(),
 });
 
+const createCourse = Joi.object({
+  name: Joi.string().required(),
+  tutor_name: Joi.string().required(),
+  description: Joi.string().required(),
+  unit: Joi.number(),
+});
 
-module.exports = {registerStudent};
+const editCourse = Joi.object({
+  name: Joi.string(),
+  tutor_name: Joi.string(),
+  description: Joi.string()
+});
+
+module.exports = {registerStudent, createCourse, editCourse};
